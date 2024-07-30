@@ -15,11 +15,11 @@ export const App = () => {
     <div>
       <Login />
       <Home />
-      <AddProduct />
-      <Profile />
-      <Product />
       <SentRequests />
       <ReceivedRequests />
+      <Product />
+      <Profile />
+      <AddProduct />
     </div>
   );
   // <RouterProvider router={router} />;

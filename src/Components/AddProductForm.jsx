@@ -13,9 +13,9 @@ export const AddProductForm = () => {
     reset();
   };
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form className="mt-6" onSubmit={handleSubmit(onSubmit)}>
       <div className="flex flex-row ">
-        <div className="flex flex-col gap-2 w-[50%] mx-8">
+        <div className="flex flex-col gap-4 w-[50%] mx-8">
           {firstPartInputs?.map((item) => (
             <AddProductInputField
               register={register}
@@ -25,7 +25,7 @@ export const AddProductForm = () => {
             />
           ))}
         </div>
-        <div className="flex flex-col gap-2 w-[50%] h-auto mx-8">
+        <div className="flex flex-col gap-4 w-[50%] h-auto mx-8">
           {secondPartInputs?.map((item) => (
             <AddProductInputField
               register={register}
@@ -44,7 +44,7 @@ export const AddProductForm = () => {
       </div>
       <button
         type="submit"
-        className="mx-8 my-2 bg-black px-2 py-1 font-semibold rounded text-white"
+        className="mx-8 my-4 bg-black px-3 py-1 font-semibold rounded text-white"
       >
         Submit
       </button>

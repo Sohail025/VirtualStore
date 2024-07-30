@@ -1,6 +1,12 @@
 export const firstPartInputs = ["title", "price", "category", "location"];
 export const secondPartInputs = ["description", "quantity"];
-
+export const sidebarOptions = [
+  "Profile",
+  "Add New Product",
+  "Recieved Requests",
+  "Sent Requests",
+  "Home",
+];
 export const errorMessages = {
   title: "Enter the title of the product",
   price: "Ente the Product Price",

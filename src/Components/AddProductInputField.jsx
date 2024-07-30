@@ -5,8 +5,8 @@ export const AddProductInputField = ({ register, errors, name }) => {
   const [error, errorStatus] = useErrorFinder(name, errors);
   const [Heading] = FirstLetterCapitalConvertor(name);
   return (
-    <>
-      <label htmlFor={name}>
+    <div className="flex flex-col gap-[0.1rem]">
+      <label htmlFor={name} className="text-[#47484f] text-[0.9rem]">
         {Heading}
         {errorStatus && (
           <span className="text-red-700 text-[0.7rem]"> /{error}</span>
@@ -20,12 +20,12 @@ export const AddProductInputField = ({ register, errors, name }) => {
             message: error,
           },
         })}
-        className="outline-none py-2 indent-1 rounded border-black border-2 text-[0.8rem] "
+        className="outline-none py-2 indent-1 rounded border-[#7b8089] border-[0.1rem] text-[0.8rem] "
         spellCheck="disable"
         autoComplete="off"
         placeholder={error}
       />
-    </>
+    </div>
   );
 };
 AddProductInputField.propTypes = {
