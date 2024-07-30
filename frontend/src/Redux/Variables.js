@@ -4,7 +4,7 @@ export const sidebarOptions = [
   "Profile",
   "Add New Product",
   "Recieved Requests",
-  "Sent Requests",
+  "Pending Requests",
   "Home",
 ];
 export const headerOptions = ["Add New Product", "Category", "Contact"];

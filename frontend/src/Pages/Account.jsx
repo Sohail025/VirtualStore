@@ -1,6 +1,6 @@
+import { Outlet } from "react-router-dom";
 import Sidebar from "../Components/Sidebar";
-import AddProductForm from "../Components/AddProductForm";
-export const AddProduct = () => {
+export const Account = () => {
   return (
     <div className="w-screen flex flex-row h-screen font-[Inter] font-medium text-[#333336]">
       <Sidebar />
@@ -10,13 +10,11 @@ export const AddProduct = () => {
         </div>
         <div className="flex justify-center h-full">
           <div className="bg-[#ffffff] w-full h-[95%] mx-12 shadow-lg rounded">
-            <p className="py-2 px-2 my-2 indent-3">Add Product</p>
-            <hr />
-            <AddProductForm />
+            <Outlet />
           </div>
         </div>
       </div>
     </div>
   );
 };
-export default AddProduct;
+export default Account;

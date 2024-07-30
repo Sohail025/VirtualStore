@@ -2,6 +2,7 @@ import { NotificationsActiveOutlined, AccountBox } from "@mui/icons-material";
 import { headerOptions } from "../Redux/Variables";
 import HeaderBtn from "./HeaderBtn";
 import HeaderSearchForm from "./HeaderSearchForm";
+import { Link } from "react-router-dom";
 export const Header = () => {
   return (
     <header className="flex flex-row justify-between py-5 mx-36">
@@ -26,11 +27,13 @@ export const Header = () => {
             sx={{ fontSize: 30 }}
             style={{ color: "#2f323b" }}
           />
-          <AccountBox
-            className="cursor-pointer"
-            sx={{ fontSize: 30 }}
-            style={{ color: "#2f323b" }}
-          />
+          <Link to={"/account/profile"}>
+            <AccountBox
+              className="cursor-pointer"
+              sx={{ fontSize: 30 }}
+              style={{ color: "#2f323b" }}
+            />
+          </Link>
         </div>
       </div>
     </header>

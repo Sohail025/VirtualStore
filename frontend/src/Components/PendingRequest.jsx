@@ -1,4 +1,4 @@
-export const SentRequest = () => {
+export const PendingRequest = () => {
   return (
     <li className="flex flex-row justify-between mx-3 bg-emerald-200 px-3 py-[0.5rem] rounded">
       <div className="flex flex-row justify-between w-[40%]">
@@ -13,4 +13,4 @@ export const SentRequest = () => {
     </li>
   );
 };
-export default SentRequest;
+export default PendingRequest;
