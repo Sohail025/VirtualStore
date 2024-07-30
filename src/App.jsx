@@ -14,12 +14,12 @@ export const App = () => {
   return (
     <div>
       <Login />
-      <Home />
-      <SentRequests />
+      {/* <Home /> */}
+      {/* <SentRequests />
       <ReceivedRequests />
       <Product />
       <Profile />
-      <AddProduct />
+      <AddProduct /> */}
     </div>
   );
   // <RouterProvider router={router} />;

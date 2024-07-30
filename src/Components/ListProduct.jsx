@@ -1,15 +1,22 @@
 export const ListProduct = () => {
   return (
-    <div className="bg-[#a7a4a4] h-44">
-      <div className="h-[80%] flex justify-center items-center">
+    <div className="h-64 flex flex-col gap-4">
+      <div className="bg-[#5C5F6A] bg-opacity-10 h-[70%] flex justify-center items-center rounded">
         <span className="w-40 h-24 flex justify-center items-center">
           <img src="/Shirts/cover 1.svg" alt="" />
         </span>
       </div>
-      <div className="bg-[#b87171] h-[20%]">
-        <div className="flex flex-row justify-between mx-4 h-full items-center">
-          <span className="">Price : 40$</span>
-          <button>Open</button>
+      <div className=" h-[30%]">
+        <div className="flex flex-col h-full gap-1">
+          <p className="text-[0.8rem] font-medium">Black Tshirt</p>
+          <div className="flex flex-row gap-4 items-center">
+            <button className="text-[.6rem] px-[0.8rem] py-[0.17rem] border-[#8c8d91] border-[0.08rem] rounded-[1rem]">
+              DASKA
+            </button>
+            <span className="text-[.9rem] font-semibold text-[#5C5F6A]">
+              40.00$
+            </span>
+          </div>
         </div>
       </div>
     </div>

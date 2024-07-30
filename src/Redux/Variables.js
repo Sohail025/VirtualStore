@@ -7,6 +7,7 @@ export const sidebarOptions = [
   "Sent Requests",
   "Home",
 ];
+export const headerOptions = ["Add New Product", "Category", "Contact"];
 export const errorMessages = {
   title: "Enter the title of the product",
   price: "Ente the Product Price",

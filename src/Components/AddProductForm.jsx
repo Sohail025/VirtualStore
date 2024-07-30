@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { CloudUpload } from "@mui/icons-material";
 import AddProductInputField from "./AddProductInputField";
 import { firstPartInputs, secondPartInputs } from "../Redux/Variables";
 export const AddProductForm = () => {
@@ -34,10 +35,13 @@ export const AddProductForm = () => {
               key={item}
             />
           ))}
-          <div className="flex flex-col gap-2">
-            <p>Images</p>
-            <div className="py-4 rounded h-4 border-black border-2 flex flex-row items-center ">
-              <span className="mx-3 cursor-pointer"> Choose Product Image</span>
+          <div className="flex flex-col gap-1">
+            <p className="text-[#47484f] text-[0.9rem]">Images</p>
+            <div className="py-3 rounded flex flex-row pl-3 items-center border-[#7b8089] border-[0.1rem] cursor-pointer">
+              <CloudUpload sx={{ fontSize: 30 }} />
+              <span className="mx-3 text-[#797a80] text-[0.85rem]">
+                Uplaod Product Images
+              </span>
             </div>
           </div>
         </div>
