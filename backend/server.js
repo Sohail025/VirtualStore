@@ -1,11 +1,24 @@
 const express = require("express");
 const app = express();
+require("dotenv").config();
 const port = 3000;
+const connectDB = require("./db/connect");
+const router = require("./routes/router");
+const cors = require("cors");
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
+app.use(express.json());
+app.use(cors());
 
-app.listen(port, () => {
-  console.log(`App listening on http://localhost:${port}`);
-});
+app.use("/", router);
+
+const run = () => {
+  try {
+    connectDB(process.env.MONGO_URI);
+    app.listen(port, () => {
+      console.log(`Server is running on http://localhost:${port}`);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+run();
