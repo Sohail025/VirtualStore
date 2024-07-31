@@ -1,23 +1,28 @@
-import { NotificationsActiveOutlined, AccountBox } from "@mui/icons-material";
-import { headerOptions } from "../Redux/Variables";
-import HeaderBtn from "./HeaderBtn";
+import {
+  NotificationsActiveOutlined,
+  AccountBox,
+  Menu,
+} from "@mui/icons-material";
 import HeaderSearchForm from "./HeaderSearchForm";
 import { Link } from "react-router-dom";
+import HeaderBtns from "./HeaderBtns";
 export const Header = () => {
   return (
-    <header className="flex flex-row justify-between py-5 mx-36">
-      <div className="flex flex-row justify-center gap-24">
+    <header className="flex flex-row justify-between py-5 lg:mx-36">
+      <div className="flex flex-row justify-center lg:gap-24">
         <div className="flex flex-row items-center gap-3">
-          <span>
+          <span className=" lg:hidden">
+            <Menu />
+          </span>
+          <span className="w-8 h-auto lg:w-auto lg:h-auto">
             <img src="Logomark.svg" alt="" />
           </span>
-          <span className="font-[Manrope]">Virtual Store</span>
+
+          <span className="font-[Manrope] text-[0.8rem] lg:text-[1rem] text-nowrap">
+            Virtual Store
+          </span>
         </div>
-        <div className="flex flex-row items-center gap-1 font-[Inter]">
-          {headerOptions.map((item) => (
-            <HeaderBtn name={item} key={item} />
-          ))}
-        </div>
+        <HeaderBtns />
       </div>
       <div className="flex flex-row gap-6 justify-center">
         <HeaderSearchForm />

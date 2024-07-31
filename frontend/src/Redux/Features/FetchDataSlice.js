@@ -1,23 +1,26 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-const PostData = createAsyncThunk("dataPosting", async (userdata, thunkAPI) => {
-  try {
-    const res = fetch("http://localhost:3000/createUser", {
-      method: "POST",
-      headers: {
-        "content-Type": "application/json",
-      },
-      body: JSON.stringify(userdata),
-    });
-    if (!res.ok) {
-      const error = await res.json();
-      return thunkAPI.rejectWithValue(error);
+export const PostData = createAsyncThunk(
+  "dataPosting",
+  async (userdata, thunkAPI) => {
+    try {
+      const res = fetch("http://localhost:3000/createUser", {
+        method: "POST",
+        headers: {
+          "content-Type": "application/json",
+        },
+        body: JSON.stringify(userdata),
+      });
+      if (!res.ok) {
+        const error = await res.json();
+        return thunkAPI.rejectWithValue(error);
+      }
+      return await res.json();
+    } catch (error) {
+      thunkAPI.rejectWithValue({ message: error.message });
     }
-    return await res.json();
-  } catch (error) {
-    thunkAPI.rejectWithValue({ message: error.message });
   }
-});
+);
 const FetchData = createSlice({
   name: "FetchData",
   initialState: { data: [], loading: false, error: null },

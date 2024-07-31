@@ -18,7 +18,7 @@ export const BrandProduct = () => {
           </div>
         </div>
         <div>
-          <div className="w-44 h-40 flex justify-center items-center ">
+          <div className="w-44 h-40 flex justify-center items-center hidden lg:block">
             <img
               className="object-cover w-96 h-40"
               src="BrandShirt.svg"

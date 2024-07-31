@@ -6,6 +6,7 @@ import BackupLoginButton from "./BackupLoginButton";
 import { UsernameField } from "./UsernameField";
 import { LoginStatusChanger } from "../Redux/Features/LoginSlice";
 import { useDispatch } from "react-redux";
+import { PostData } from "../Redux/Features/FetchDataSlice";
 export const SignUpForm = () => {
   const dispatch = useDispatch();
   const {
@@ -15,6 +16,7 @@ export const SignUpForm = () => {
     reset,
   } = useForm();
   const onSubmit = (data) => {
+    dispatch(PostData(data));
     console.log(data);
     dispatch(LoginStatusChanger(1));
     reset();
