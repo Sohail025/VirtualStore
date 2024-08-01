@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 const schema = new mongoose.Schema({
-  name: {
+  productName: {
     type: String,
     required: [true, "Must Provide the name!"],
     trim: true,
   },
   price: {
-    type: Number,
+    type: String,
     required: [true, "Must Provide the price!"],
     trim: true,
   },
@@ -15,10 +15,9 @@ const schema = new mongoose.Schema({
     required: [false],
     trim: true,
   },
-  src: {
-    type: String,
-    required: [true, "Must Provide the image source"],
-    trim: true,
+  requests: {
+    type: Array,
+    default: [],
   },
 });
 module.exports = mongoose.model("Products", schema);
