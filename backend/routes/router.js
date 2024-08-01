@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { createUser } = require("../controllers/post");
+const { createUser, login } = require("../controllers/post");
 // const { getAllItems, GetSingleItem } = require("../controllers/get");
 // const {
 //   deleteAllItems,
@@ -14,6 +14,7 @@ const { createUser } = require("../controllers/post");
 // router.post("/check/user", CheckUser);
 // router.post("/add/in/cart", addItemsInCart);
 router.post("/createUser", createUser);
+router.post("/login", login);
 // router.post("/add/in/purchase", addItemsInPurchase);
 // router.post("/get/all/cart", getAllCartItems);
 // router.get("/get/all", getAllItems);
