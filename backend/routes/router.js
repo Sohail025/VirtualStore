@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { createUser, login, addProduct } = require("../controllers/post");
-// const { getAllItems, GetSingleItem } = require("../controllers/get");
+const { getAllProducts } = require("../controllers/get");
 // const {
 //   deleteAllItems,
 //   deleteSingleItem,
@@ -12,5 +12,6 @@ const { createUser, login, addProduct } = require("../controllers/post");
 router.post("/createUser", createUser);
 router.post("/login", login);
 router.post("/addProduct", addProduct);
+router.get("/getAllProducts", getAllProducts);
 
 module.exports = router;
