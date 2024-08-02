@@ -14,4 +14,4 @@ router.post("/login", login);
 router.post("/addProduct", addProduct);
 router.get("/getAllProducts", getAllProducts);
 
-module.exports = router
+module.exports = router;
