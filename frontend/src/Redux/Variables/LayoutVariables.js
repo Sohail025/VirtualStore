@@ -16,3 +16,12 @@ export const errorMessages = {
   category: "Enter the catagory of your product",
   location: "Enter Your Location",
 };
+export const placeHolder = {
+  title: "White Tshirt",
+  price: "$40.00",
+  quantity: "4",
+  description:
+    "Clean white Tshirt is available is Stock. Anyone Intersted send request.",
+  category: "Shirts",
+  location: "Daska",
+};

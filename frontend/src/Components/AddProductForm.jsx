@@ -1,7 +1,10 @@
 import { useForm } from "react-hook-form";
 import { CloudUpload } from "@mui/icons-material";
 import AddProductInputField from "./AddProductInputField";
-import { firstPartInputs, secondPartInputs } from "../Redux/Variables";
+import {
+  firstPartInputs,
+  secondPartInputs,
+} from "../Redux/Variables/LayoutVariables";
 export const AddProductForm = () => {
   const {
     register,
@@ -15,8 +18,8 @@ export const AddProductForm = () => {
   };
   return (
     <form className="mt-6" onSubmit={handleSubmit(onSubmit)}>
-      <div className="flex flex-row ">
-        <div className="flex flex-col gap-4 w-[50%] mx-8">
+      <div className="flex lg:flex-row flex-col gap-4 lg:gap-0">
+        <div className="flex flex-col gap-4 lg:w-[50%] mx-8">
           {firstPartInputs?.map((item) => (
             <AddProductInputField
               register={register}
@@ -26,7 +29,7 @@ export const AddProductForm = () => {
             />
           ))}
         </div>
-        <div className="flex flex-col gap-4 w-[50%] h-auto mx-8">
+        <div className="flex flex-col gap-4 lg:w-[50%] h-auto mx-8">
           {secondPartInputs?.map((item) => (
             <AddProductInputField
               register={register}

@@ -1,4 +1,4 @@
-import { headerOptions } from "../Redux/Variables";
+import { headerOptions } from "../Redux/Variables/LayoutVariables";
 import HeaderBtn from "./HeaderBtn";
 export const HeaderBtns = () => {
   return (

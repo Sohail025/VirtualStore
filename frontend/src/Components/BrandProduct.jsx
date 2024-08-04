@@ -2,13 +2,13 @@ import { ArrowForward } from "@mui/icons-material";
 
 export const BrandProduct = () => {
   return (
-    <div className="bg-gradient-to-r from-[#dbe1db] to-[rgb(251,249,249)] mx-10 font-[Inter]">
-      <div className="py-6 mx-[4rem] flex flex-row justify-between items-center">
-        <div className="w-[48%] mx-8 gap-4 flex flex-col">
-          <p className="text-[1.7rem] font-bold text-[#0E1422]">
+    <div className="bg-gradient-to-r from-[#dbe1db] to-[rgb(251,249,249)] lg:mx-10 mx-4 font-[Inter] mt-5">
+      <div className="py-6 lg:mx-[4rem] mx-5 flex flex-row justify-between items-center">
+        <div className="w-[70%] lg:w-[48%]  lg:mx-8 gap-4 flex flex-col">
+          <p className="lg:text-[1.7rem] text-[1rem] font-bold text-[#0E1422] text-nowrap">
             Best Deal of The Market
           </p>
-          <p className="text-[#64666b] text-[0.8rem]">
+          <p className="text-[#64666b] lg:text-[0.8rem] text-[0.7rem] ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius vitae
             nam cupiditate aperiam, illum hic modi.
           </p>
@@ -18,9 +18,9 @@ export const BrandProduct = () => {
           </div>
         </div>
         <div>
-          <div className="w-44 h-40 flex justify-center items-center hidden lg:block">
+          <div className="lg:w-44 w-[9rem] lg:h-40 h-[10rem] ml-[1.5rem] lg:ml-0 flex lg:justify-center lg:items-center ">
             <img
-              className="object-cover w-96 h-40"
+              className="object-cover w-96 h-auto"
               src="BrandShirt.svg"
               alt=""
             />

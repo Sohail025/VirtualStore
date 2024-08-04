@@ -1,4 +1,5 @@
-export const ListProduct = () => {
+import PropTypes from "prop-types";
+export const ListProduct = ({ item }) => {
   return (
     <div className="h-64 flex flex-col gap-4">
       <div className="bg-[#5C5F6A] bg-opacity-10 h-[70%] flex justify-center items-center rounded">
@@ -8,18 +9,21 @@ export const ListProduct = () => {
       </div>
       <div className=" h-[30%]">
         <div className="flex flex-col h-full gap-1">
-          <p className="text-[0.8rem] font-medium">Black Tshirt</p>
+          <p className="text-[0.8rem] font-medium">{item.title}</p>
           <div className="flex flex-row gap-4 items-center">
             <button className="text-[.6rem] px-[0.8rem] py-[0.17rem] border-[#8c8d91] border-[0.08rem] rounded-[1rem]">
-              DASKA
+              {item.location}
             </button>
             <span className="text-[.9rem] font-semibold text-[#5C5F6A]">
-              40.00$
+              {`$${item.price}.00`}
             </span>
           </div>
         </div>
       </div>
     </div>
   );
+};
+ListProduct.propTypes = {
+  item: PropTypes.object.isRequired,
 };
 export default ListProduct;

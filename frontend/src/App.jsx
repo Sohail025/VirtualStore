@@ -1,4 +1,8 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  Navigate,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
 import Login from "./Pages/Login";
 import Home from "./Pages/Home";
 import PendingRequests from "./Components/PendingRequests";
@@ -7,18 +11,25 @@ import Product from "./Pages/Product";
 import Profile from "./Components/Profile";
 import AddProduct from "./Components/AddProduct";
 import Account from "./Pages/Account";
+import ProtectedRoute from "./Pages/ProtectedRoute";
 const router = createBrowserRouter([
-  { path: "/", element: <Login /> },
+  { path: "/login", element: <Login /> },
   { path: "/home", element: <Home /> },
   {
-    path: "/account",
-    element: <Account />,
+    path: "",
+    element: <ProtectedRoute />,
     children: [
-      { path: "/account/profile", element: <Profile /> },
-      { path: "/account", element: <Profile /> },
-      { path: "/account/addproduct", element: <AddProduct /> },
-      { path: "/account/pendingrequests", element: <PendingRequests /> },
-      { path: "/account/receivedrequests", element: <ReceivedRequests /> },
+      {
+        path: "/",
+        element: <Account />,
+        children: [
+          { path: "", element: <Navigate to={"/home"} /> },
+          { path: "/profile", element: <Profile /> },
+          { path: "/addproduct", element: <AddProduct /> },
+          { path: "/pendingrequests", element: <PendingRequests /> },
+          { path: "/receivedrequests", element: <ReceivedRequests /> },
+        ],
+      },
     ],
   },
 ]);

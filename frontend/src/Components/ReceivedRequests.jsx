@@ -5,7 +5,7 @@ export const ReceivedRequests = () => {
       <h1 className="font-semibold text-[1.7rem]">List of Recieved Requests</h1>
       <div className="flex flex-col gap-4">
         <div className="flex flex-row justify-between mx-3 bg-[#a9a4a4] px-3 py-[0.5rem] rounded">
-          <div className="flex flex-row justify-between w-[40%]">
+          <div className="flex flex-row justify-between w-[40%] gap-6 sm:gap-0">
             <span>UserName</span>
             <span>Product</span>
             <span>Price</span>
